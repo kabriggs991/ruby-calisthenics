@@ -9,7 +9,7 @@ module FunWithStrings
     count = Hash.new(0)
     clean_array.each { |n|
       n = n.downcase.gsub(/(?=\S)(\W|\d)/, "")
-      count[n] += 1
+      count[n] += 1 unless n.length == 0
       
     }
     return count
